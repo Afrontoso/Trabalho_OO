@@ -33,6 +33,7 @@ public class Playlist {
 		return duracaoPlaylist;
 	}
 	
+<<<<<<< HEAD
 	public String getMusicas() {
 		return musicas;
 	}
@@ -43,6 +44,13 @@ public class Playlist {
 
 	public void adicionarMusica(String tituloMusica) {
 	}
+=======
+	public void adicionarMusica(String tituloAlbum, String tituloMusica, String genero) {
+        Musica novaMusica = new Musica(tituloMusica, genero);
+        // Lógica para adicionar a nova música ao array de músicas
+        // (Você precisa implementar essa lógica)
+    }
+>>>>>>> d188400addcf8a29ba308e75ea51efcf38b2aedb
 	
 	public void editarPlaylist(String nomePlaylist, String tituloMusica) {
 	}

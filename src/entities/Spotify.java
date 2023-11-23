@@ -58,6 +58,7 @@ public class Spotify {
 //			return artistas;
 //		}
 
+<<<<<<< HEAD
 	public Artista getnArtista(int i) {
 		return artistas[i];
 	}
@@ -200,6 +201,23 @@ public class Spotify {
 					"artista".concat(s), "genero".concat(s));
 
 			nUsuarios = nArtistas = nMusicas = nPlaylist = 10;
+=======
+		public void preencherDados() {
+			for(int i = 0; i < 10; i++) {
+				String s = String.valueOf(i);
+				usuario[i] = new Usuario("Usuario".concat(s), "dataNascimento".concat(s), "email".concat(s), 
+						"senha".concat(s));
+				artistas[i] = new Artista("Artista".concat(s), "dataNascimento".concat(s), "email".concat(s), 
+						"senha".concat(s),"albuns".concat(s), "musicas".concat(s), "seguidores".concat(s),"sob".concat(s));
+				musicas[i] = new Musica("Musica".concat(s), "artista".concat(s),"duracao".concat(s), "album".concat(s));
+				playlist[i] = new Playlist("Playlist".concat(s), "proprietario".concat(s), 
+						"musicas".concat(s),"duracaoPlaylis".concat(s));
+				albuns[i] = new Album("Album".concat(s), "anoLancamento".concat(s), 
+						"musicas".concat(s),"artista".concat(s), "genero".concat(s));
+				artistas[i].adicionarMusica(new Album(artistas[i], "musica".concat(s), i, "tituloAlbum".concat(s) ));	
+				
+			nUsuarios = nArtistas = nMusicas = 10;
+>>>>>>> d188400addcf8a29ba308e75ea51efcf38b2aedb
 		}
 	}
 }
