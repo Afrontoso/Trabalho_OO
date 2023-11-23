@@ -1,5 +1,4 @@
 package entities;
-import java.util.Date;
 public class Artista extends Pessoa {
 	private Album[]albuns;
 	private Musica[]musicas;
@@ -35,6 +34,15 @@ public String getSobre() {
 public void setSobre(String sobre) {
 	this.sobre = sobre;
 }
+Spotify spotify = new Spotify();
+String[] arrayDeAlbum = spotify.getNomeAlbuns();
+String[] arrayDeMusica = spotify.getNomeMusica();
+
+public void adicionarAlbum(String tituloAlbum, String tituloMusica, String genero, String anoLancamento, String artista) {	
+	for (int i = 0; i < 50; i++) {
+		spotify.getNomeAlbuns();
+    }
+}
 
 	public void deletarAlbum(String tituloAlbum, String tituloMusica, String genero) {
 		for (int i = 0; i < nAlbuns; i++) {
@@ -64,3 +72,4 @@ public void setSobre(String sobre) {
 }
 
 }
+	
