@@ -98,6 +98,20 @@ public class Program {
 		saida = saida + "\n";
 		return saida;
 	}
+	
+	public static String imprimirMenuLogado() {
+		String saida = new String("Escolha uma das opcoes a seguir:\n");
+		
+		saida = saida + "00 - Sair da aplicacao\n";
+		saida = saida + "---------------------------------\n";
+		saida = saida + "01 - Ver playlists\n";
+		saida = saida + "---------------------------------\n";
+		saida = saida + "02 - Adicionar musica\n";
+		saida = saida + "---------------------------------\n";
+		saida = saida + "\n";
+		return saida;
+	}
+	
 	public static boolean cadastrarUsuario() {
 		Usuario u = lerDadosUsuario();
 		if(d.getnUsuarios() < 100) {
@@ -167,10 +181,42 @@ public class Program {
 		 */
 	}
 	
+	public static void listarPlaylists() {
+		sc.nextLine(); //esvazia dados do teclado
+		for(int i = 0; i < d.getnPlaylist(); i++) 
+			System.out.println(i + " -> " + d.getPlaylist()[i].getNomePlaylist());
+		/* Descomente a linha a seguir para ver a listagem dos alunos em interface gráfica
+		 * new TelaListagem(d.getNomeAlunos());
+		 * 
+		 * 
+		 */
+	}
+	
 	public static void entrarUsuario(int i) {
 		if(i < d.getnUsuarios() && i >= 0) {
-			d.getnUsuario(i);
-			System.out.println("Dados editados com sucesso");
+			System.out.println("Entrando...\n");
+			
+			int op2 = -1;
+
+			while(op2 != 0) {
+				System.out.print(imprimirMenuLogado());
+				op2 = sc.nextInt();
+				 switch (op2) {
+				 	case 0:
+				 		break;
+				 	case 1:
+				 		listarPlaylists();
+				 		
+				 		break;
+				 	case 2:
+				 		adicionarMusica();
+				 		
+				 		break;
+					default:
+						System.out.println("\nOpcao Invalida!\n");
+						break;
+				 }
+			}
 		} else {
 			System.out.println("Voce escolheu um numero invalido!");
 		}

@@ -1,8 +1,5 @@
 package entities;
-public class Playlist {
-	
-	
-	
+public class Playlist {	
 	private String nomePlaylist;
 	private String proprietario;
 	private String musicas;
@@ -20,7 +17,6 @@ public class Playlist {
 	public Playlist(String nomePlaylist) {
 		this.nomePlaylist = nomePlaylist;
 	}
-	
 	public String getNomePlaylist() {
 		return nomePlaylist;
 	}
@@ -37,6 +33,14 @@ public class Playlist {
 		return duracaoPlaylist;
 	}
 	
+	public String getMusicas() {
+		return musicas;
+	}
+
+	public void setMusicas(String musicas) {
+		this.musicas = musicas;
+	}
+
 	public void adicionarMusica(String tituloMusica) {
 	}
 	
