@@ -37,8 +37,11 @@ public class Playlist {
 		return duracaoPlaylist;
 	}
 	
-	public void adicionarMusica(String tituloMusica) {
-	}
+	public void adicionarMusica(String tituloAlbum, String tituloMusica, String genero) {
+        Musica novaMusica = new Musica(tituloMusica, genero);
+        // Lógica para adicionar a nova música ao array de músicas
+        // (Você precisa implementar essa lógica)
+    }
 	
 	public void editarPlaylist(String nomePlaylist, String tituloMusica) {
 	}
